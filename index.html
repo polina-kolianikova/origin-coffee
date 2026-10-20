@@ -1,33 +1,357 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#351b19">
-  <meta name="description" content="ORIGIN. Specialty coffee, from the ground up. Explore origins, shape your roast and make a better brew.">
-  <title>ORIGIN · Good things take grounds</title>
-  <link rel="stylesheet" href="./styles.css?v=20261020.2">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23351b19'/%3E%3Ccircle cx='32' cy='32' r='21' fill='none' stroke='%23eddbb7' stroke-width='8'/%3E%3C/svg%3E">
-  <script type="module" src="./app.js?v=20261020.2"></script>
-</head>
-<body>
-  <a class="skip" href="#brew">Skip to the brew lab</a>
-  <header class="header"><a class="logo" href="#top" aria-label="ORIGIN home">ORIGIN<span class="logo-symbol">®</span></a><span class="brand-note">SPECIALTY COFFEE<br>FROM THE GROUND UP.</span><nav aria-label="Main navigation"><a href="#source">The source</a><a href="#roast">The roast</a><a class="nav-button" href="#brew">Make it yours <span>↗</span></a></nav></header>
-  <main>
-    <section class="coffee-story" id="top" aria-label="From origin to cup">
-      <div class="scene" aria-hidden="true"><div class="scene-grain"></div><span class="giant-o">O</span><div class="scene-type"><span>GOOD THINGS</span><span>TAKE GROUNDS.</span></div><canvas id="coffee-canvas"></canvas><div class="fallback-bag"><span>ORIGIN</span><b>THE<br>GOOD<br>GROUND.</b><small>SINGLE ORIGIN / 250 G</small></div><div class="scene-coordinate"><span>21° 22′ N</span><i></i><span id="scene-origin">ETHIOPIA / SIDAMA</span></div><span class="stage-vertical">GOOD COFFEE. GOOD COMPANY. GOOD MORNINGS.</span><div class="story-meter"><span id="chapter-count">01 / 04</span><div><i id="story-progress"></i></div><span>SCROLL. SLOWLY.</span></div></div>
-      <div class="chapters">
-        <article class="chapter hero"><div class="hero-topline"><span>INDEPENDENTLY ROASTED.</span><span>ALWAYS CURIOUS.</span></div><div class="chapter-copy"><p class="eyebrow"><span class="small-mark">✳</span> NOT JUST ANOTHER CUP.</p><h1>GOOD THINGS<br>TAKE <span class="outline-text">GROUNDS.</span></h1><p class="hero-description">Great coffee starts somewhere.<br>Let's take you there.</p><a class="round-link" href="#source"><span>FROM THE<br>GROUND UP</span><b>↘</b></a></div><div class="hero-bottom"><span>GROWN WITH CARE.<br>ROASTED WITH INTENTION.</span><span>01 / BEAN THERE.<br>NOW, LET'S BEGIN.</span></div></article>
-        <article class="chapter source" id="source"><div class="chapter-copy"><p class="eyebrow">01 / EVERY BEAN HAS A BACKSTORY.</p><h2>SMALL PLACE.<br><span class="outline-text">BIG CHARACTER.</span></h2><p class="body-copy">Altitude. Soil. A particular kind of rain.<br>Change the place. Change the whole cup.</p><div class="origin-switcher" role="group" aria-label="Choose coffee origin"><button data-origin="ethiopia" aria-pressed="true" class="active"><span>01</span>Ethiopia<i>↗</i></button><button data-origin="colombia" aria-pressed="false"><span>02</span>Colombia<i>↗</i></button><button data-origin="guatemala" aria-pressed="false"><span>03</span>Guatemala<i>↗</i></button></div><div class="origin-facts" aria-live="polite"><div><span>REGION</span><b id="origin-region">Sidama</b></div><div><span>ALTITUDE</span><b id="origin-altitude">1,800 to 2,200 m</b></div><div><span>IN THE CUP</span><b id="origin-notes">Jasmine. Peach. Citrus.</b></div></div></div><span class="corner-note">NOT A BLEND.<br>A POINT OF VIEW.</span></article>
-        <article class="chapter roast" id="roast"><div class="chapter-copy"><p class="eyebrow">02 / A LITTLE HEAT CHANGES EVERYTHING.</p><h2>FIND YOUR<br><span class="outline-text">SWEET SPOT.</span></h2><p class="body-copy">Bright and curious. Deep and familiar.<br>Turn up the roast. Follow your taste.</p><div class="roast-control"><div class="roast-top"><label for="roast-level">YOUR ROAST PROFILE</label><output for="roast-level" id="roast-label">LIGHT / 02</output></div><input id="roast-level" type="range" min="0" max="100" value="30" step="1" aria-describedby="roast-description"><div class="roast-range-labels"><span>LIGHT</span><span>MEDIUM</span><span>DEEP</span></div><p id="roast-description" aria-live="polite">Floral aromatics. Bright acidity. A delicate, tea-like body.</p><div class="flavour-chart"><div><span>BRIGHTNESS</span><i><b id="brightness-bar"></b></i></div><div><span>BODY</span><i><b id="body-bar"></b></i></div><div><span>ROAST</span><i><b id="roast-bar"></b></i></div></div></div></div><div class="heat-label"><span>✳</span> ROAST IS A CHOICE.<br>GOOD TASTE IS YOURS.</div></article>
-        <article class="chapter cup"><div class="chapter-copy"><p class="eyebrow">03 / YOUR NEXT GOOD MORNING.</p><h2>LESS GUESS.<br><span class="outline-text">BETTER BREW.</span></h2><p class="body-copy">You bring the mug.<br>We'll bring a starting point.</p><a class="brew-link" href="#brew">Step into the brew lab <span>↘</span></a></div><span class="cup-note">ONE ORIGIN.<br>A THOUSAND WAYS TO MAKE IT YOURS.</span></article>
-      </div>
-    </section>
-    <section class="origin-photograph" aria-label="Coffee, up close"><img src="./assets/coffee-macro.jpg" alt="Detailed surface and creases of freshly roasted coffee beans" width="1800" height="1125" loading="lazy" decoding="async"><div><p class="eyebrow">A SMALL WORLD. WORTH GETTING LOST IN.</p><p>Nothing ordinary.<br>Even at the<br>smallest scale.</p><span>PHOTOGRAPH: POPSMOKE VETS / UNSPLASH</span></div></section>
-    <section class="ticker" aria-label="Our approach"><div><span>GROWN SLOW.</span><i>✳</i><span>ROASTED RIGHT.</span><i>✳</i><span>BREWED YOUR WAY.</span><i>✳</i></div></section>
-    <section class="brew-lab" id="brew" aria-labelledby="brew-title"><div class="lab-intro"><p class="eyebrow">THE KITCHEN COUNTER, RECONSIDERED.</p><h2 id="brew-title">YOUR CUP.<br>YOUR <span class="outline-text">RULES.</span></h2><p>A recipe is a place to start.<br>Your taste gets the final say.</p><span class="lab-stamp">THE<br>BREW<br>LAB.<small>ORIGIN / NO. 001</small></span></div><form id="brew-form" class="brew-form"><fieldset><legend><span>01</span> CHOOSE YOUR WEAPON.</legend><div class="method-options"><label><input name="method" type="radio" value="pourover" checked><span><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M13 14h34L35 39H25Z M21 42h19 M28 39v6 M15 48h29 M26 18l3 15 M37 18l-3 15"/></svg><b>Pour-over</b></span></label><label><input name="method" type="radio" value="frenchpress"><span><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M17 20h25v27H17Z M23 16h13 M29 9v27 M19 35h20 M43 25h7v15h-7 M24 9h10 M14 49h32"/></svg><b>French press</b></span></label><label><input name="method" type="radio" value="aeropress"><span><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M22 9h17v30H22Z M19 39h23v5H19Z M24 44v5h13v-5 M19 9h23 M27 15h7 M27 22h7 M27 29h7 M15 51h32"/></svg><b>AeroPress</b></span></label></div></fieldset><fieldset class="dose-field"><legend><span>02</span> HOW MUCH COFFEE?</legend><div class="dose-controls"><button type="button" id="less-coffee" aria-label="Use one gram less">−</button><label><input id="coffee-dose" type="number" min="10" max="60" step="1" value="20" required aria-label="Coffee dose in grams"><span>GRAMS</span></label><button type="button" id="more-coffee" aria-label="Use one gram more">+</button></div></fieldset><fieldset><legend><span>03</span> MAKE IT YOUR KIND OF STRONG.</legend><div class="strength-options"><label><input type="radio" name="strength" value="15"><span>Bold</span></label><label><input type="radio" name="strength" value="16" checked><span>Balanced</span></label><label><input type="radio" name="strength" value="17"><span>Easy</span></label></div></fieldset><div class="recipe-ticket" aria-live="polite"><div class="ticket-heading"><span>YOUR STARTING POINT.</span><span id="recipe-method">POUR-OVER / 01</span></div><div class="recipe-numbers"><div><b id="water-amount">320</b><span>ML OF WATER</span></div><div><b id="temperature">94°</b><span>WATER TEMP</span></div><div><b id="brew-time">3:00</b><span>BREW TIME</span></div></div><p id="recipe-steps">Bloom with 60 ml for 30 seconds. Pour the remaining 260 ml in slow circles. Aim for an even bed.</p><div class="recipe-foot"><span id="recipe-grind">MEDIUM-FINE GRIND</span><span id="recipe-ratio">1:16 RATIO</span></div></div><button class="save-recipe" type="button" id="save-recipe">TAKE THIS RECIPE WITH YOU <span>↓</span></button><p class="save-note" id="recipe-status" role="status">A small text file. A better tomorrow morning.</p></form></section>
-    <section class="closing"><p>ALL ROADS LEAD<br>TO A <span class="outline-text">GOOD CUP.</span></p><a href="#top" aria-label="Return to the top">↗</a></section>
-    <footer><span class="logo">ORIGIN<span class="logo-symbol">®</span></span><p>Independent brand concept by Polina Koljanikova.<br>Interactive portfolio study. Coffee products are concepts.</p><span>GOOD COFFEE.<br>NO SHORTCUTS.<br>© 2026</span></footer>
-  </main>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#351b19" />
+    <meta
+      name="description"
+      content="ORIGIN. Specialty coffee, from the ground up. Explore origins, shape your roast and make a better brew."
+    />
+    <title>ORIGIN · Good things take grounds</title>
+    <link
+      rel="stylesheet"
+      href="./styles.css?v=3a12985a2152a978758586bc2a1d105084a26494518504f6eb8240c098fff0b7"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23351b19'/%3E%3Ccircle cx='32' cy='32' r='21' fill='none' stroke='%23eddbb7' stroke-width='8'/%3E%3C/svg%3E"
+    />
+    <script
+      type="module"
+      src="./app.js?v=ee576929b59b4a0a0327c09ed1d36acfc2a8b769d2b381b81d129b1475678c44"
+    ></script>
+  </head>
+  <body>
+    <a class="skip" href="#brew">Skip to the brew lab</a>
+    <header class="header">
+      <a class="logo" href="#top" aria-label="ORIGIN home"
+        >ORIGIN<span class="logo-symbol">®</span></a
+      ><span class="brand-note">SPECIALTY COFFEE<br />FROM THE GROUND UP.</span>
+      <nav aria-label="Main navigation">
+        <a href="#source">The source</a><a href="#roast">The roast</a
+        ><a class="nav-button" href="#brew">Make it yours <span>↗</span></a>
+      </nav>
+    </header>
+    <main>
+      <section class="coffee-story" id="top" aria-label="From origin to cup">
+        <div class="scene" aria-hidden="true">
+          <div class="scene-grain"></div>
+          <span class="giant-o">O</span>
+          <div class="scene-type">
+            <span>GOOD THINGS</span><span>TAKE GROUNDS.</span>
+          </div>
+          <canvas id="coffee-canvas"></canvas>
+          <div class="fallback-bag">
+            <span>ORIGIN</span><b>THE<br />GOOD<br />GROUND.</b
+            ><small>SINGLE ORIGIN / 250 G</small>
+          </div>
+          <div class="scene-coordinate">
+            <span>21° 22′ N</span><i></i
+            ><span id="scene-origin">ETHIOPIA / SIDAMA</span>
+          </div>
+          <span class="stage-vertical"
+            >GOOD COFFEE. GOOD COMPANY. GOOD MORNINGS.</span
+          >
+          <div class="story-meter">
+            <span id="chapter-count">01 / 04</span>
+            <div><i id="story-progress"></i></div>
+            <span>SCROLL. SLOWLY.</span>
+          </div>
+        </div>
+        <div class="chapters">
+          <article class="chapter hero">
+            <div class="hero-topline">
+              <span>INDEPENDENTLY ROASTED.</span><span>ALWAYS CURIOUS.</span>
+            </div>
+            <div class="chapter-copy">
+              <p class="eyebrow">
+                <span class="small-mark">✳</span> NOT JUST ANOTHER CUP.
+              </p>
+              <h1>
+                GOOD THINGS<br />TAKE <span class="outline-text">GROUNDS.</span>
+              </h1>
+              <p class="hero-description">
+                Great coffee starts somewhere.<br />Let's take you there.
+              </p>
+              <a class="round-link" href="#source"
+                ><span>FROM THE<br />GROUND UP</span><b>↘</b></a
+              >
+            </div>
+            <div class="hero-bottom">
+              <span>GROWN WITH CARE.<br />ROASTED WITH INTENTION.</span
+              ><span>01 / BEAN THERE.<br />NOW, LET'S BEGIN.</span>
+            </div>
+          </article>
+          <article class="chapter source" id="source">
+            <div class="chapter-copy">
+              <p class="eyebrow">01 / EVERY BEAN HAS A BACKSTORY.</p>
+              <h2>
+                SMALL PLACE.<br /><span class="outline-text"
+                  >BIG CHARACTER.</span
+                >
+              </h2>
+              <p class="body-copy">
+                Altitude. Soil. A particular kind of rain.<br />Change the
+                place. Change the whole cup.
+              </p>
+              <div
+                class="origin-switcher"
+                role="group"
+                aria-label="Choose coffee origin"
+              >
+                <button
+                  data-origin="ethiopia"
+                  aria-pressed="true"
+                  class="active"
+                >
+                  <span>01</span>Ethiopia<i>↗</i></button
+                ><button data-origin="colombia" aria-pressed="false">
+                  <span>02</span>Colombia<i>↗</i></button
+                ><button data-origin="guatemala" aria-pressed="false">
+                  <span>03</span>Guatemala<i>↗</i>
+                </button>
+              </div>
+              <div class="origin-facts" aria-live="polite">
+                <div><span>REGION</span><b id="origin-region">Sidama</b></div>
+                <div>
+                  <span>ALTITUDE</span
+                  ><b id="origin-altitude">1,800 to 2,200 m</b>
+                </div>
+                <div>
+                  <span>IN THE CUP</span
+                  ><b id="origin-notes">Jasmine. Peach. Citrus.</b>
+                </div>
+              </div>
+            </div>
+            <span class="corner-note">NOT A BLEND.<br />A POINT OF VIEW.</span>
+          </article>
+          <article class="chapter roast" id="roast">
+            <div class="chapter-copy">
+              <p class="eyebrow">02 / A LITTLE HEAT CHANGES EVERYTHING.</p>
+              <h2>
+                FIND YOUR<br /><span class="outline-text">SWEET SPOT.</span>
+              </h2>
+              <p class="body-copy">
+                Bright and curious. Deep and familiar.<br />Turn up the roast.
+                Follow your taste.
+              </p>
+              <div class="roast-control">
+                <div class="roast-top">
+                  <label for="roast-level">YOUR ROAST PROFILE</label
+                  ><output for="roast-level" id="roast-label"
+                    >LIGHT / 02</output
+                  >
+                </div>
+                <input
+                  id="roast-level"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="30"
+                  step="1"
+                  aria-describedby="roast-description"
+                />
+                <div class="roast-range-labels">
+                  <span>LIGHT</span><span>MEDIUM</span><span>DEEP</span>
+                </div>
+                <p id="roast-description" aria-live="polite">
+                  Floral aromatics. Bright acidity. A delicate, tea-like body.
+                </p>
+                <div class="flavour-chart">
+                  <div>
+                    <span>BRIGHTNESS</span><i><b id="brightness-bar"></b></i>
+                  </div>
+                  <div>
+                    <span>BODY</span><i><b id="body-bar"></b></i>
+                  </div>
+                  <div>
+                    <span>ROAST</span><i><b id="roast-bar"></b></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="heat-label">
+              <span>✳</span> ROAST IS A CHOICE.<br />GOOD TASTE IS YOURS.
+            </div>
+          </article>
+          <article class="chapter cup">
+            <div class="chapter-copy">
+              <p class="eyebrow">03 / YOUR NEXT GOOD MORNING.</p>
+              <h2>
+                LESS GUESS.<br /><span class="outline-text">BETTER BREW.</span>
+              </h2>
+              <p class="body-copy">
+                You bring the mug.<br />We'll bring a starting point.
+              </p>
+              <a class="brew-link" href="#brew"
+                >Step into the brew lab <span>↘</span></a
+              >
+            </div>
+            <span class="cup-note"
+              >ONE ORIGIN.<br />A THOUSAND WAYS TO MAKE IT YOURS.</span
+            >
+          </article>
+        </div>
+      </section>
+      <section class="origin-photograph" aria-label="Coffee, up close">
+        <img
+          src="./assets/coffee-macro.jpg"
+          alt="Detailed surface and creases of freshly roasted coffee beans"
+          width="1800"
+          height="1125"
+          loading="lazy"
+          decoding="async"
+        />
+        <div>
+          <p class="eyebrow">A SMALL WORLD. WORTH GETTING LOST IN.</p>
+          <p>Nothing ordinary.<br />Even at the<br />smallest scale.</p>
+          <span>PHOTOGRAPH: POPSMOKE VETS / UNSPLASH</span>
+        </div>
+      </section>
+      <section class="ticker" aria-label="Our approach">
+        <div>
+          <span>GROWN SLOW.</span><i>✳</i><span>ROASTED RIGHT.</span><i>✳</i
+          ><span>BREWED YOUR WAY.</span><i>✳</i>
+        </div>
+      </section>
+      <section class="brew-lab" id="brew" aria-labelledby="brew-title">
+        <div class="lab-intro">
+          <p class="eyebrow">THE KITCHEN COUNTER, RECONSIDERED.</p>
+          <h2 id="brew-title">
+            YOUR CUP.<br />YOUR <span class="outline-text">RULES.</span>
+          </h2>
+          <p>
+            A recipe is a place to start.<br />Your taste gets the final say.
+          </p>
+          <span class="lab-stamp"
+            >THE<br />BREW<br />LAB.<small>ORIGIN / NO. 001</small></span
+          >
+        </div>
+        <form id="brew-form" class="brew-form">
+          <fieldset>
+            <legend><span>01</span> CHOOSE YOUR WEAPON.</legend>
+            <div class="method-options">
+              <label
+                ><input
+                  name="method"
+                  type="radio"
+                  value="pourover"
+                  checked
+                /><span
+                  ><svg viewBox="0 0 60 60" aria-hidden="true">
+                    <path
+                      d="M13 14h34L35 39H25Z M21 42h19 M28 39v6 M15 48h29 M26 18l3 15 M37 18l-3 15"
+                    /></svg
+                  ><b>Pour-over</b></span
+                ></label
+              ><label
+                ><input name="method" type="radio" value="frenchpress" /><span
+                  ><svg viewBox="0 0 60 60" aria-hidden="true">
+                    <path
+                      d="M17 20h25v27H17Z M23 16h13 M29 9v27 M19 35h20 M43 25h7v15h-7 M24 9h10 M14 49h32"
+                    /></svg
+                  ><b>French press</b></span
+                ></label
+              ><label
+                ><input name="method" type="radio" value="aeropress" /><span
+                  ><svg viewBox="0 0 60 60" aria-hidden="true">
+                    <path
+                      d="M22 9h17v30H22Z M19 39h23v5H19Z M24 44v5h13v-5 M19 9h23 M27 15h7 M27 22h7 M27 29h7 M15 51h32"
+                    /></svg
+                  ><b>AeroPress</b></span
+                ></label
+              >
+            </div>
+          </fieldset>
+          <fieldset class="dose-field">
+            <legend><span>02</span> HOW MUCH COFFEE?</legend>
+            <div class="dose-controls">
+              <button
+                type="button"
+                id="less-coffee"
+                aria-label="Use one gram less"
+              >
+                −</button
+              ><label
+                ><input
+                  id="coffee-dose"
+                  type="number"
+                  min="10"
+                  max="60"
+                  step="1"
+                  value="20"
+                  required
+                  aria-label="Coffee dose in grams"
+                /><span>GRAMS</span></label
+              ><button
+                type="button"
+                id="more-coffee"
+                aria-label="Use one gram more"
+              >
+                +
+              </button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><span>03</span> MAKE IT YOUR KIND OF STRONG.</legend>
+            <div class="strength-options">
+              <label
+                ><input type="radio" name="strength" value="15" /><span
+                  >Bold</span
+                ></label
+              ><label
+                ><input type="radio" name="strength" value="16" checked /><span
+                  >Balanced</span
+                ></label
+              ><label
+                ><input type="radio" name="strength" value="17" /><span
+                  >Easy</span
+                ></label
+              >
+            </div>
+          </fieldset>
+          <div class="recipe-ticket" aria-live="polite">
+            <div class="ticket-heading">
+              <span>YOUR STARTING POINT.</span
+              ><span id="recipe-method">POUR-OVER / 01</span>
+            </div>
+            <div class="recipe-numbers">
+              <div><b id="water-amount">320</b><span>ML OF WATER</span></div>
+              <div><b id="temperature">94°</b><span>WATER TEMP</span></div>
+              <div><b id="brew-time">3:00</b><span>BREW TIME</span></div>
+            </div>
+            <p id="recipe-steps">
+              Bloom with 60 ml for 30 seconds. Pour the remaining 260 ml in slow
+              circles. Aim for an even bed.
+            </p>
+            <div class="recipe-foot">
+              <span id="recipe-grind">MEDIUM-FINE GRIND</span
+              ><span id="recipe-ratio">1:16 RATIO</span>
+            </div>
+          </div>
+          <button class="save-recipe" type="button" id="save-recipe">
+            TAKE THIS RECIPE WITH YOU <span>↓</span>
+          </button>
+          <p class="save-note" id="recipe-status" role="status">
+            A small text file. A better tomorrow morning.
+          </p>
+        </form>
+      </section>
+      <section class="closing">
+        <p>
+          ALL ROADS LEAD<br />TO A <span class="outline-text">GOOD CUP.</span>
+        </p>
+        <a href="#top" aria-label="Return to the top">↗</a>
+      </section>
+      <footer>
+        <span class="logo">ORIGIN<span class="logo-symbol">®</span></span>
+        <p>
+          Independent brand concept by Polina Koljanikova.<br />Interactive
+          portfolio study. Coffee products are concepts.
+        </p>
+        <span>GOOD COFFEE.<br />NO SHORTCUTS.<br />© 2026</span>
+      </footer>
+    </main>
+  </body>
 </html>
