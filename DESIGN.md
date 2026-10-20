@@ -1,34 +1,27 @@
-# ORIGIN art direction
+# ORIGIN, second edition
 
-## The idea
+The central pouch opens a roastery world. A huge two-line typographic field sits behind the product. The opening is centred rather than a headline beside an object. Oxblood, copper and toasted cream continue into a real macro photograph and the receipt-like brewing lab.
 
-A loud typographic roastery with a quiet respect for the product. Oxblood, copper and toasted cream replace the usual coffee-shop beige. A large outlined headline contrasts with a tactile printed pouch. The same product world continues into beans and a ceramic cup.
+## Geometry and story
 
-Bebas Neue supplies compact, confident display type. DM Sans handles tiny coordinates, control labels and the recipe ticket. Both are local SIL Open Font License fonts.
+The pouch has a deformed paper front, back, side gussets and a lifting crimped seam. Local printed artwork changes with the selected origin. Forty-four individually transformed coffee beans share one InstancedMesh instead of the earlier 66 bean meshes. Each bean has a sculpted central crease. The same identities leave the package, orbit through the roast chapter and converge on the ceramic cup.
 
-## Story map
+The cup has a thick inner and outer wall, handle, saucer and a locally generated coffee surface with a crema ring. Native scroll maps to one progress coordinate. The story stops when scrolling stops and reverses predictably. No idle orbit advances it.
 
-| Chapter | Spatial event | Useful action |
-| --- | --- | --- |
-| 01 / Ground | A printed pouch with gussets, seals and folds sits in a warm studio world | Enter the story |
-| 02 / Source | The pouch moves left while beans reveal the source material | Choose an origin and see the artwork change |
-| 03 / Roast | Beans separate around the package and show roast colour | Adjust the roast profile |
-| 04 / Cup | The package recedes while a ceramic cup and saucer take the foreground | Continue to the brew calculator |
+## Real imagery
 
-The pouch uses a subdivided front surface with bulge, taper, small edge creases, back, side gussets and crimped seams. A generated printed texture gives each origin its own colour and information. Each bean consists of two irregularly positioned lobes and a visible central groove. The cup has inner and outer walls, a handle, coffee surface, crema edge and saucer.
+A full-width macro photograph by PopSmoke Vets provides a change in scale and material. The local 1800 x 1125 photograph was visually inspected before use. The Unsplash source, author and license are listed in assets/LICENSES.md.
 
-## Motion architecture
+## Performance
 
-Native scroll determines a 0 to 3 progress value. A deterministic pose map moves the pouch, beans and cup through the same world. Time adds only slight idle motion. Pointer movement is small and disabled for reduced motion. Reverse scrolling does not trigger irreversible timelines.
+There are zero transmission materials, shadow maps or post-processing passes. Beans submit in one draw call. Rendering is event-driven, with no perpetual RAF. Hidden and offscreen states cancel pending work.
 
-The mobile composition places copy above a smaller scene. In reduced motion the object angle and main desktop object position are fixed, with no pointer parallax or idle motion. Text stays in a consistent column. The story still communicates the sequence through normal page scrolling.
+Antialiasing is enabled. DPR is capped at 1.4 with budgets of 2.2 million physical pixels on desktop and 0.95 million on mobile. Adaptive reduction ignores the first ten frames. It requires 15 slow CPU submission frames in a window of 20 consecutive active frames. A pause resets the sample. This is not a GPU performance measurement.
 
-## Working route
+The document root exposes renderFrames, drawCalls, triangles, renderDpr and renderMode. Check unchanged counters at idle and offscreen.
 
-Origins update both canvas label and DOM facts. Roast controls update actual bean materials and recipe temperature. The recipe uses dose multiplied by the chosen ratio. AeroPress recipes account for brewer capacity by splitting large quantities into equal batches. Invalid input cannot be exported as if valid. The download contains the selected origin, roast, method, dose, ratio, water, temperature, time and instructions.
+## Real controls
 
-## Budget and verification
+Origin selection changes the actual package label. Roast changes the bean material and suggested brewing temperature. Pour-over, French press and AeroPress use the entered dose and selected ratio. Invalid doses cannot be exported. The downloaded recipe includes actual current values. AeroPress instructions split oversized recipes into equal batches.
 
-One renderer, capped DPR 1.6, no post-processing, no shadow-map passes, and modest procedural geometry. Rendering is skipped outside the story and in hidden documents. No unmeasured FPS claim is made.
-
-Review initial composition, every chapter and transition midpoint, origin label updates, roast at both extremes, scene reversal, 390 px mobile layout, native range keyboard controls, dose validation, all brewing methods, export contents, reduced motion and WebGL fallback.
+Keyboard access, mobile layout, reduced motion and CSS WebGL fallback are included. The integrating agent verifies browser frames, reversal, real controls and exported contents before accepting the exact revision.

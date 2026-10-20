@@ -8,7 +8,7 @@ Serve the directory with any static HTTP server and open `index.html` through HT
 
 ## Interactions
 
-Scroll from sculpted coffee packaging to origin character, roast exploration and the final ceramic cup. Ethiopia, Colombia and Guatemala update the package artwork and origin information. The roast slider changes bean colour, flavour bars and recipe temperature.
+Scroll from a centred sculpted package to an instanced bean orbit, roast exploration and the final ceramic cup. A real licensed macro photograph provides an editorial pause. Ethiopia, Colombia and Guatemala update the package artwork and origin information. The roast slider changes bean colour, flavour bars and recipe temperature.
 
 The brew lab supports pour-over, French press and AeroPress. Dose is validated from 10 to 60 grams. Bold, Balanced and Easy choose ratios of 1:15, 1:16 and 1:17. Water quantity, temperature, grind, time and instructions update immediately. The save button downloads the actual current recipe as a text file.
 
