@@ -1,3 +1,9 @@
+# Current visual implementation, October 2026
+
+The product scene now uses generated photographic assets and DOM transforms driven by native scroll. This supersedes geometry and material details in the historical design notes below. Typography is defined in typography.css; generated product media is styled in product-art.css and positioned by product-story.js. Source generation prompts and full QA evidence are kept in the parent delivery workspace.
+
+## Earlier direction
+
 # ORIGIN, second edition
 
 The central pouch opens a roastery world. A huge two-line typographic field sits behind the product. The opening is centred rather than a headline beside an object. Oxblood, copper and toasted cream continue into a real macro photograph and the receipt-like brewing lab.

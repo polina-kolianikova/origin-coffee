@@ -1,0 +1,55 @@
+/* Project type direction. Local fonts, licensed for web embedding. */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/anton-normal-400-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/barlow-normal-400-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/barlow-normal-500-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/barlow-normal-600-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body { font-kerning: normal; font-synthesis: none; text-rendering: optimizeLegibility; }
+button, input, textarea, select { font-family: inherit; }
+h1, h2, h3 { font-kerning: normal; text-wrap: balance; hyphens: none; }
+:root { --display: "Anton", Impact, sans-serif; --sans: "Barlow", Arial, sans-serif; --type-display: var(--display); --type-text: var(--sans); }
+body { font-family: var(--sans); }
+h1, h2, .scene-type, .logo, .closing > p { font-weight: 400; letter-spacing: -0.015em; }
+h1, h2 { line-height: 1.02; }
+.scene-type { font-size: clamp(100px, 14vw, 225px); line-height: 1.01; }
+.origin-photograph > div > p:not(.eyebrow) { line-height: 1.08; }
+.logo { font-size: 44px; }
+.eyebrow, .hero-topline, .hero-bottom, .scene-coordinate, .origin-facts, .receipt-lines, .receipt-foot, .heat-label, .cup-note { letter-spacing: 0.035em; }
+@media (max-width: 700px) { .scene-type { font-size: 17.5vw; line-height: 1.08; } .logo { font-size: 36px; } }
+@media (max-height: 500px) and (min-width: 701px) { .scene-type { font-size: 16vh; } }
+
+.source h2 { font-size: clamp(56px, 6.5vw, 112px); }
+.cup h2 { font-size: clamp(64px, 7.1vw, 112px); }
+.lab-intro h2 { font-size: clamp(70px, 7vw, 112px); line-height: 1.08; }
+@media (max-width: 700px) {
+  .source h2 { font-size: clamp(44px, 14.7vw, 62px); }
+  .lab-intro h2 { font-size: clamp(46px, 14.8vw, 65px); }
+}

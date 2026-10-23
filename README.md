@@ -1,27 +1,21 @@
 # ORIGIN
 
-An independent specialty coffee brand concept by Polina Koljanikova. The site combines a four-chapter Three.js story with origin selection, roast control and a useful brew calculator.
+Independent specialty coffee concept by Polina Koljanikova. Generated photographic packaging, a detailed bean and ceramic cup form a four-chapter scroll story. Anton and Barlow are hosted locally.
 
 ## Run
 
-Serve the directory with any static HTTP server and open `index.html` through HTTP. There is no compilation, installation, API key, runtime CDN or external font request. The folder is ready to be used as a dedicated static GitHub Pages repository. `.nojekyll` is included.
+Serve this directory over HTTP. It has no build, installation, API key, runtime CDN or external font request. The root is ready for its dedicated GitHub Pages repository.
 
 ## Interactions
 
-Scroll from a centred sculpted package to an instanced bean orbit, roast exploration and the final ceramic cup. A real licensed macro photograph provides an editorial pause. Ethiopia, Colombia and Guatemala update the package artwork and origin information. The roast slider changes bean colour, flavour bars and recipe temperature.
+The coffee pouch travels between the source and roast chapters. Photographic beans follow scroll and gather into the final cup composition. Scroll reversal is immediate. Ethiopia, Colombia and Guatemala change the visible origin facts and recipe context. The generic packaging stays consistent. Roast controls update flavour bars and recipe temperature.
 
-The brew lab supports pour-over, French press and AeroPress. Dose is validated from 10 to 60 grams. Bold, Balanced and Easy choose ratios of 1:15, 1:16 and 1:17. Water quantity, temperature, grind, time and instructions update immediately. The save button downloads the actual current recipe as a text file.
+Pour-over, French press and AeroPress accept a dose from 10 to 60 grams. Strength chooses ratios of 1:15, 1:16 or 1:17. Water, temperature, grind, time and instructions update together. The save button downloads the current recipe. Nothing is submitted or purchased.
 
-## Access and resilience
+## Access and assets
 
-Controls use native inputs with keyboard access and visible focus. Result areas announce changes politely. There is skip navigation, a dedicated mobile composition, a reduced-motion mode and a CSS package fallback if WebGL fails. Origin selection, roast controls, calculations and downloads continue working without WebGL.
+The story uses transparent responsive WebP assets rather than geometry or live canvas labels. Phones keep the product in available reading space. Reduced motion uses still chapter states. Native controls, visible focus, skip navigation and live results remain available.
 
-## Boundaries
+Product photographs were generated with the built-in ChatGPT image tool. The bean macro interlude is a separate locally stored licensed photograph. Licenses and credits remain in assets/LICENSES.md and assets/fonts. The brand is fictional; region and flavour data are illustrative, not a claim about a real supplier or batch.
 
-The brand and coffee products are fictional concepts. Region information provides illustrative context, not a claim about a real farm, supplier, certification or batch. Flavour bars are qualitative visualisations. Recipes are starting points, not promises of extraction accuracy. There is no checkout or form submission.
-
-## Attribution and checks
-
-All geometry, packaging design, labels, SVG brewer illustrations, layout and interactions were created for this project. Local external dependencies and licenses are documented in `assets/LICENSES.md`.
-
-Syntax and local files are checked by the integrating project. Published visual and interaction evidence should be attached to the exact release. Source checks do not establish device performance or visual acceptance.
+Browser checks verify selected Chromium mobile and desktop viewports, not physical phones or Safari.

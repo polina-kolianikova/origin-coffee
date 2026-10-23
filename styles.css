@@ -131,6 +131,10 @@ button {
 .coffee-story {
   position: relative;
 }
+.coffee-story {
+  position: relative;
+  overflow: clip;
+}
 .scene {
   position: sticky;
   top: 0;
@@ -602,8 +606,12 @@ h2 {
   color: var(--ink);
   padding: 115px 8%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10%;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(40px, 6vw, 100px);
+}
+.lab-intro,
+.brew-form {
+  min-width: 0;
 }
 .brew-lab .outline-text {
   -webkit-text-stroke: 1px var(--ink);
@@ -803,17 +811,21 @@ h2 {
   padding-bottom: 15px;
 }
 .recipe-numbers {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
   padding: 22px 0;
 }
 .recipe-numbers > div {
+  min-width: 0;
   display: flex;
   flex-direction: column;
 }
 .recipe-numbers b {
   font: 46px var(--display);
   line-height: 1;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 .recipe-numbers span {
   font-size: 6px;
@@ -1468,11 +1480,13 @@ footer > span:last-child {
 }
 .origin-photograph {
   position: relative;
-  height: 680px;
+  min-height: 680px;
   overflow: hidden;
   background: #1e1510;
 }
 .origin-photograph > img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1480,12 +1494,13 @@ footer > span:last-child {
   display: block;
 }
 .origin-photograph > div {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  min-height: inherit;
   padding: 70px 8%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 40px;
 }
 .origin-photograph > div > p:not(.eyebrow) {
   font: clamp(58px, 7vw, 112px) / 0.9 var(--display);
@@ -1547,13 +1562,13 @@ footer > span:last-child {
     font-size: 5px;
   }
   .origin-photograph {
-    height: 550px;
+    min-height: 550px;
   }
   .origin-photograph > div {
     padding: 45px 7%;
   }
   .origin-photograph > div > p:not(.eyebrow) {
-    font-size: 65px;
+    font-size: clamp(38px, 11vw, 54px);
   }
   .origin-photograph > div > span {
     font-size: 6px;
@@ -1624,6 +1639,7 @@ footer > span:last-child {
   }
   .method-options label > span {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 18px;
     min-height: 64px;
@@ -1631,6 +1647,7 @@ footer > span:last-child {
   }
   .method-options label > span svg {
     flex: none;
+    margin: 0;
   }
   .recipe-ticket > p {
     font-size: 13px;
@@ -1781,5 +1798,77 @@ footer > span:last-child {
   }
   .cup-note {
     bottom: 10%;
+  }
+}
+
+/* Lower content keeps a readable rhythm without competing with the scene. */
+.lab-intro h2,
+.origin-photograph > div > p:not(.eyebrow) {
+  line-height: 1.08;
+}
+.lab-stamp {
+  line-height: 1.08;
+}
+.ticket-heading {
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  line-height: 1.5;
+}
+.closing > p {
+  min-width: 0;
+  line-height: 1.05;
+}
+.closing > a {
+  flex: none;
+}
+footer > p {
+  max-width: 46ch;
+}
+@media (max-width: 700px) {
+  .ticket-heading {
+    font-size: 10px;
+  }
+  .recipe-numbers {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding: 10px 0;
+  }
+  .recipe-numbers > div {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 0;
+  }
+  .recipe-numbers > div + div {
+    border-top: 1px solid #311d1a18;
+  }
+  .recipe-numbers span {
+    margin: 0;
+    text-align: right;
+    line-height: 1.5;
+  }
+  .closing {
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  .closing > p {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    gap: 28px 20px;
+    align-items: start;
+  }
+  footer > p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  footer > span:last-child {
+    font-size: 10px;
   }
 }
