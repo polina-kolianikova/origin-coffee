@@ -1,0 +1,62 @@
+/* Mobile chapters use native document flow. Product art has a reserved frame. */
+.mobile-product-stage { display:none; }
+@media (max-width:700px), (max-width:1000px) and (pointer:coarse) {
+ html { scroll-padding-top:28px; }
+ body { overflow-x:clip; }
+ .header { justify-content:space-between; gap:16px; }
+ .brand-note,.header-note,.scene-grain { display:none; }
+ header,.header { padding-left:max(24px,env(safe-area-inset-left)); padding-right:max(24px,env(safe-area-inset-right)); height:88px; }
+ .story,.coffee-story { overflow:clip; }
+ .story > .stage,.story > .scene,.coffee-story > .scene { position:absolute; inset:0; height:100%; min-height:0; margin:0; }
+ .scene > .product-art,.stage > .product-art,.scene-word,.scene-type,.giant-o,.stage-title,.light-slit,.light-floor,.specimen,.chapter-track,.margin-note,.chapter-side,.scroll-cue,.scene-coordinate,.story-meter,.stage-vertical,.hero-topline,.hero-bottom,.heat-label,.cup-note,.left-coordinate,.right-coordinate,.story-footer,.chapter-corner,.corner-note { display:none; }
+ .chapters .chapter { display:flex; flex-direction:column; align-items:stretch; justify-content:flex-start; height:auto; min-height:0; max-height:none; padding:56px max(24px,env(safe-area-inset-left)) 24px max(24px,env(safe-area-inset-right)); text-align:left; }
+ .chapters .chapter:first-child { padding-top:126px; }
+ .chapters .chapter + .chapter { border-top:1px solid var(--line); }
+ .chapters .chapter-copy,.chapters .chapter .chapter-copy { position:relative; width:100%; max-width:none; }
+ .chapter .eyebrow,.chapter-kicker { position:static; margin:0 0 20px; font-size:10px; line-height:1.7; letter-spacing:.07em; }
+ .chapter .body-copy,.chapter .hero-description,.chapter .intro-description { position:static; max-width:100%; font-size:14px; line-height:1.75; margin:22px 0; }
+ .chapter .body-copy br { display:none; }
+ .chapter .mobile-product-stage { display:block; position:relative; flex:none; width:100%; height:330px; padding:18px 8px; margin:18px 0 0; overflow:hidden; isolation:isolate; pointer-events:none; }
+ .mobile-product-stage img { display:block; width:100%; height:100%; object-fit:contain; transform:translate3d(0,var(--product-y,0px),0) rotate(var(--product-turn,0deg)); transform-origin:50% 58%; }
+ .chapter .text-link,.chapter .solid-link,.chapter .brew-link,.chapter .signature-link { min-height:48px; }
+ .chapter input[type=range] { min-height:44px; }
+ input[type=number],input[type=text],select,textarea { font-size:16px; }
+ footer { padding-bottom:max(28px,env(safe-area-inset-bottom)); }
+}
+@media (max-width:1000px) and (pointer:coarse) and (orientation:landscape) {
+ .chapters .chapter { padding-left:max(40px,env(safe-area-inset-left)); padding-right:max(40px,env(safe-area-inset-right)); }
+ .chapter .mobile-product-stage { height:320px; max-width:500px; align-self:center; }
+}
+@media(prefers-reduced-motion:reduce) { .mobile-product-stage img { transform:none; } }
+@media (max-width:700px), (max-width:1000px) and (pointer:coarse) {
+ .hero h1 { position:static; width:auto; height:auto; overflow:visible; clip-path:none; white-space:normal; margin:0; }
+ .chapter h1,.chapter h2,.source h2,.cup h2 { font-size:clamp(43px,12.4vw,68px); line-height:1.08; margin:0; }
+ .hero .chapter-copy > .eyebrow { position:static; margin:0 0 20px; }
+ .round-link { position:static; width:84px; height:84px; margin:24px 0 0 auto; }
+ .hero .mobile-product-stage { margin-top:-30px; width:calc(100% - 90px); align-self:flex-start; height:320px; }
+ .chapter .origin-switcher,.chapter .roast-control { width:100%; max-width:none; margin-top:25px; }
+ .origin-facts { width:100%; grid-template-columns:minmax(0,1fr); gap:14px; margin-top:24px; }
+ .origin-facts > div:last-child { grid-column:auto; }
+ .origin-facts > div { display:grid; grid-template-columns:85px minmax(0,1fr); align-items:baseline; gap:12px; }
+ .flavour-chart > div > span { font-size:10px; }
+ .origin-facts span { font-size:10px; }
+ .origin-facts b { font-size:14px; }
+ .brew-lab { display:block; padding:64px 24px; }
+ .lab-intro { margin-bottom:48px; }
+ .lab-intro h2 { font-size:clamp(50px,13vw,76px); }
+ .brew-form { min-width:0; }
+ .lab-stamp { position:static; margin-top:30px; }
+ .recipe-numbers { grid-template-columns:1fr; }
+ .recipe-numbers > div { flex-direction:row; align-items:center; justify-content:space-between; gap:20px; padding:14px 0; }
+ .recipe-numbers > div + div { border-top:1px solid #311d1a18; }
+ .recipe-numbers span { margin:0; text-align:right; }
+ .ticket-heading,.recipe-foot { flex-wrap:wrap; gap:14px; }
+ .chapter .hero-description { display:block; }
+ .save-recipe { gap:20px; line-height:1.5; }
+ .method-options { grid-template-columns:1fr; gap:8px; }
+ .method-options label > span { min-width:0; padding:18px 5px; }
+ .method-options b { font-size:12px; }
+ .closing { display:flex; flex-wrap:wrap; }
+ .closing > p { flex-basis:100%; }
+ footer { display:grid; grid-template-columns:1fr; gap:28px; }
+}

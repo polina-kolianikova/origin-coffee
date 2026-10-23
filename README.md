@@ -19,3 +19,7 @@ The story uses transparent responsive WebP assets rather than geometry or live c
 Product photographs were generated with the built-in ChatGPT image tool. The bean macro interlude is a separate locally stored licensed photograph. Licenses and credits remain in assets/LICENSES.md and assets/fonts. The brand is fictional; region and flavour data are illustrative, not a claim about a real supplier or batch.
 
 Browser checks verify selected Chromium mobile and desktop viewports, not physical phones or Safari.
+
+## iPhone Safari composition, October2026
+
+The mobile experience now reserves explicit photographic or live-model frames in normal document flow. It does not move the hero object into arbitrary gaps between text blocks. Header, content, forms and footer share the mobile reading grid; desktop retains its cinematic composition. Exact local static font weights avoid variable-default differences across browser engines. Relevant touch interactions, portrait/landscape transitions and live scene visibility were checked in Playwright WebKit. This is browser emulation, not a physical iPhone test.
